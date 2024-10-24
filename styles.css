@@ -1,0 +1,321 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-image: url(vintage\ books\ aesthetic.jfif);
+    background-size: cover;
+    background-position: center;
+    /* backdrop-filter: grayscale(1); */
+}
+
+.main {
+    width: 100%;
+    height: 1000px;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.75) rgba(0, 0, 0, 0.75));
+    background-size: cover;
+    background-position: center;
+}
+
+.navbar {
+    width: 85%;
+    margin: auto;
+    padding: 35px 0;
+    align-items: center;
+    justify-content: space-between;
+    display: flex;
+}
+
+.logo {
+    font-size: 50px;
+    font-weight: 700;
+    color: #ffffff;
+    width: 120px;
+    cursor: pointer;
+}
+
+.navbar ul li {
+    list-style: none;
+    display: inline-block;
+    margin: 0 20px;
+    position: relative;
+}
+
+.navbar ul li a {
+    color: #ffffff;
+    text-transform: uppercase;
+}
+
+.navbar ul li ::after {
+    content: "";
+    height: 3px;
+    background: #888;
+    position: absolute;
+    width: 0;
+    left: 0;
+    transition: 0.5s;
+    bottom: -10px;
+}
+
+.navbar ul li :hover::after{
+    width: 100%;
+}
+
+.content {
+    top: 50%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    color: #ffffff;
+    transform: translateY(-40px);
+}
+
+.content h1 {
+    font-size: 80px;
+    margin-top: 80px;
+}
+
+.content p {
+    font-size: 30px;
+    margin: 20px auto;
+    font-weight: 100%;
+    line-height: 25px;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin-top: 1px;
+}
+
+.button {
+    padding: 15px 25px;
+    border: 3px solid #333;
+    border-radius: 60px;
+    color: #ffffff;
+    z-index: 1;
+    background: transparent;
+    position: relative;
+    font-weight: 1000;
+    font-size: 17px;
+    -webkit-box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23);
+    transition: all 250ms;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0;
+    border-radius: 10%;
+    background-color: #ddd;
+    z-index: -1;
+    box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+    -webkit-box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+    transition: all 500ms;
+}
+
+
+.button:hover span {
+    color: #333;
+}
+
+.button:hover::before {
+    width: 100%;
+}
+
+.table-img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+}
+
+.gambar-musik {
+    display: flex;
+    margin: 30px 0;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.gambar-musik > img {
+    transition: filter .3s ease-in-out;
+    filter: grayscale(1);
+}
+
+.gambar-musik > img:hover {
+    filter: grayscale(0);
+}
+
+audio {
+    margin: 30px 0;
+}
+
+.rotate {
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+} 
+
+.playing {
+    animation: berputar 6s linear infinite;
+}
+
+@keyframes  berputar {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+
+}
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+}
+
+.img-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.img-card {
+    width: 220px;
+    height: 270px;
+    background-color: #333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+.img {
+    object-fit: cover;
+    border-radius: 8px;
+    width: 200px;
+    height: 250px;
+    transition: transform .5s  ease-in-out;
+
+}
+
+.img:hover {
+    transform: scale(1.1);
+}
+
+h1 {
+    font-size: 2rem;
+    color: #ddd;
+    margin-bottom: 15px;
+}
+
+p {
+    font-size: 1rem;
+    color: #e0e0e0;
+    line-height: 1.5;
+}
+
+
+#hilangkanText {
+    padding: 15px 25px;
+    border: 3px solid #333;
+    border-radius: 60px;
+    color: #ffffff;
+    z-index: 1;
+    background: transparent;
+    position: relative;
+    font-weight: 1000;
+    font-size: 17px;
+    -webkit-box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23);
+    transition: all 250ms;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+#hilangkanText::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0;
+    border-radius: 10%;
+    background-color: #ddd;
+    z-index: -1;
+    box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+    -webkit-box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+    transition: all 200ms;
+}
+
+
+#hilangkanText:hover {
+    color: #333;
+}
+
+#hilangkanText:hover::before {
+    width: 100%;
+}
+
+#kembalikanText {
+    padding: 15px 25px;
+    border: 3px solid #333;
+    border-radius: 60px;
+    color: #ffffff;
+    z-index: 1;
+    background: transparent;
+    position: relative;
+    font-weight: 1000;
+    font-size: 17px;
+    -webkit-box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23);
+    transition: all 250ms;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+#kembalikanText::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0;
+    border-radius: 10%;
+    background-color: #ddd;
+    z-index: -1;
+    box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+    -webkit-box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+    transition: all 200ms;
+}
+
+
+#kembalikanText:hover {
+    color: #333;
+}
+
+#kembalikanText:hover::before {
+    width: 100%;
+}

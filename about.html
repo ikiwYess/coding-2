@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="styles.css">
+    <title>Webdesign</title>
+</head>
+
+<body>
+    <div class="main">
+        <div class="navbar">
+            <label class="logo">Webdesign</label>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="galery.html">Gallery</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+        </div>
+        <div class="container">
+            <div class="img-container">
+                <div class="img-card">
+                    <img src="1000532609.jpg" class="img">
+                </div>
+                <div class="img-card">
+                    <img src="1000614201.jpg" class="img">
+                </div>
+            </div>
+            <h1>about Me</h1>
+            <p>Hello everyone!! nama saya Muhamad Rizky Setiawan saya berasal dari sekolah SMK AMALIAH 1, saya berada di kelas 10 pplg 1, saya berusia 15 tahun dan saya tinggal di bogor, tujuan saya masuk jurusan pplg karena saya tertarik pada dunia percodingan dan saya harap saya bisa terus berkembang mengikuti perkembangan teknologi yang sangat cepat</p>
+            <button id="hilangkanText">hilangkan text</button>
+            <button id="kembalikanText">Kembalikan Teks</button>
+        </div>
+    </div>
+
+    <script>
+const judul = document.querySelector("h1");
+const text = document.querySelector("p");
+const textHilang = document.getElementById("hilangkanText");
+const textKembali = document.getElementById("kembalikanText");
+
+textKembali.style.display = 'none'
+
+textHilang.addEventListener("click", function hilang() {
+    judul.style.display = 'none';
+    text.style.display = 'none';
+    textKembali.style.display = 'inline';
+    textHilang.style.display = 'none';
+});
+
+textKembali.addEventListener("click", function kembali() {
+    judul.style.display = 'block';
+    text.style.display = 'block';
+    textKembali.style.display = 'none'
+    textHilang.style.display = 'inline';
+});
+    </script>
+</body>
+
+</html>

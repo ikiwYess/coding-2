@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <link rel="stylesheet" href="styles.css">
+    <title>Webdesign</title>
+</head>
+<body>
+    <div class="main">
+        <div class="navbar">
+            <label class="logo">Webdesign</label>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="galery.html">Gallery</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+        </div>
+        <div class="content">
+            <h1>Rizky setiawan</h1>
+            <p>10-pplg-1</p>
+        </div>
+        <div class="center">
+            <button type="button" class="button"><span> watch more</button>
+                <button type="button" class="button"><span> subscribe</button>
+                </div>
+                <div class="gambar-musik">
+                    <img src="What Does Vintage Mean When You Buy & Sell Online.jfif" class="rotate" id="gambar">
+                    <audio controls src="y2mate.com - cigarettes after sex  cry lyrics.mp3" class="audio" id="audio"></audio>
+                </div>
+            </div> 
+            
+
+            <script>
+const audio = document.getElementById('audio');
+const gambar = document.getElementById('gambar');
+
+// Ketika audio diputar
+audio.addEventListener('play', function() {
+    gambar.classList.add('playing')
+});
+
+// Ketika audio dijeda atau berhenti
+audio.addEventListener('pause', function() {
+    gambar.classList.remove('playing');
+});
+
+audio.addEventListener('ended', function() {
+    gambar.classList.remove('playing');
+});
+            </script>
+</body>
+</html>
